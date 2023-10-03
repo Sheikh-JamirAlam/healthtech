@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Header } from "ui";
+import { Header, Carousel } from "ui";
 
 export default function Home() {
   return (
@@ -71,6 +71,7 @@ export default function Home() {
           alt="Message icon (paper plane)"
         />
       </section>
+      <Carousel />
     </>
   );
 }
