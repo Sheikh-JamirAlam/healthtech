@@ -13,11 +13,7 @@ const project = resolve(process.cwd(), "tsconfig.json");
  */
 
 module.exports = {
-  extends: [
-    "@vercel/style-guide/eslint/browser",
-    "@vercel/style-guide/eslint/typescript",
-    "@vercel/style-guide/eslint/react",
-  ].map(require.resolve),
+  extends: ["@vercel/style-guide/eslint/browser", "@vercel/style-guide/eslint/typescript", "@vercel/style-guide/eslint/react"].map(require.resolve),
   parserOptions: {
     project,
   },
@@ -34,6 +30,8 @@ module.exports = {
   ignorePatterns: ["node_modules/", "dist/", ".eslintrc.js"],
 
   rules: {
-    // add specific rules configurations here
+    "import/no-default-export": "off",
+    "react/button-has-type": [0],
+    "react/jsx-sort-props": [1, { noSortAlphabetically: true }],
   },
 };

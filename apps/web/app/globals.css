@@ -18,3 +18,20 @@ body {
   color: var(--text-color);
   background: var(--bg-color);
 }
+
+.hidden-css {
+  opacity: 0;
+  transform: translateY(5rem);
+  transition: all 0.5s ease-in-out;
+}
+
+@media(prefers-reduced-motion) {
+  .hidden-css {
+    transition: none;
+  }
+}
+
+.show-css {
+  opacity: 1;
+  transform: translateY(0);
+}
