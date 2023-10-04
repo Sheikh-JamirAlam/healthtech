@@ -63,8 +63,12 @@ export default function Home() {
         </div>
       </section>
       <section className="px-36 py-24 hidden-css">
-        <h1 className="mb-12 text-4xl font-bold text-primary-black underline decoration-primary-blue">Trusted by 100+ innovative NHS practices</h1>
-        <Link className="right-40 translate-y-8 absolute flex items-center gap-1 hover:underline hover:decoration-primary-blue" href="/case-studies">
+        <h1 className="mb-12 text-4xl font-bold text-primary-black">Trusted by 100+ innovative NHS practices</h1>
+        <Link
+          className="right-40 translate-y-8 absolute flex items-center gap-1 text-primary-blue hover:underline hover:decoration-[3px] hover:underline-offset-4 hover:decoration-primary-blue"
+          id="case-studies"
+          href="/case-studies"
+        >
           View case studies <ArrowButton size={"xl"} />
         </Link>
         <Image

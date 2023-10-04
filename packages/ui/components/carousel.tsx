@@ -47,7 +47,7 @@ export function Carousel(): JSX.Element {
   }, [emblaApi, onInit, onSelect]);
 
   return (
-    <div className="py-24 px-36">
+    <div className="pt-24 px-36">
       <div className="overflow-hidden">
         <div className="w-full" ref={emblaRef}>
           <div className="flex">

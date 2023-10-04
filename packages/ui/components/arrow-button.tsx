@@ -7,5 +7,10 @@ interface PropType {
 }
 
 export function ArrowButton({ size }: PropType): JSX.Element {
-  return <Icon className={`text-${size}`} icon="uit:arrow-circle-right" />;
+  return (
+    <>
+      <div className="w-[20px] h-[20px] rounded-full absolute right-[2px] z-0 hovering" />
+      <Icon className="w-6 h-6 z-10" icon="uit:arrow-circle-right" />
+    </>
+  );
 }
