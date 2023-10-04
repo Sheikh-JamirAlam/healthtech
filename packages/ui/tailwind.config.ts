@@ -11,6 +11,9 @@ const config: Config = {
         "primary-grey": "#6b6768",
         "light-blue": "#f3f8fc",
       },
+      flex: {
+        "100": "0 0 100%",
+      },
     },
   },
   plugins: [],

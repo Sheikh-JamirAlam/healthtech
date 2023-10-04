@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { Header, Carousel } from "ui";
+import Link from "next/link";
+import { Header, Carousel, ArrowButton } from "ui";
 
 export default function Home() {
   return (
@@ -63,15 +64,18 @@ export default function Home() {
       </section>
       <section className="px-36 py-24 hidden-css">
         <h1 className="mb-12 text-4xl font-bold text-primary-black underline decoration-primary-blue">Trusted by 100+ innovative NHS practices</h1>
+        <Link className="right-40 translate-y-8 absolute flex items-center gap-1 hover:underline hover:decoration-primary-blue" href="/case-studies">
+          View case studies <ArrowButton size={"xl"} />
+        </Link>
         <Image
           className="mx-auto"
           width={1200}
           height={1200}
           src="https://uploads-ssl.webflow.com/61114f16d48cb8a800a4f117/63cc199cd7632e59673d35e1_Screenshot%202023-01-21%20at%2016.57.09.png"
           alt="Message icon (paper plane)"
-        />
+        ></Image>
+        <Carousel />
       </section>
-      <Carousel />
     </>
   );
 }
