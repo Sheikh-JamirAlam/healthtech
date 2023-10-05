@@ -8,6 +8,7 @@ const config: Config = {
         "primary-white": "#fcfffe",
         "primary-black": "#242424",
         "primary-blue": "#4968e0",
+        "secondary-blue": "#384469",
         "primary-grey": "#6b6768",
         "light-blue": "#f3f8fc",
       },

@@ -1,8 +1,10 @@
-export function Header(): JSX.Element {
+export function Navbar(): JSX.Element {
   return (
     <main className="p-6 flex justify-evenly">
       <div>
-        <img alt="Healthtech Logo" src="/logo.png" className="w-[4rem]" />
+        <a href="/">
+          <img alt="Healthtech Logo" src="https://uploads-ssl.webflow.com/61114f16d48cb8a800a4f117/64b971031f48da0992c112e5_Screenshot%202023-06-19%20at%2012.15.25.png" className="w-[4rem]" />
+        </a>
       </div>
       <div className="text-center grid grid-flow-col gap-5 content-center items-center">
         <span className="w-24">Patient Registrations</span>

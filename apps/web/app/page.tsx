@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Header, Carousel, ArrowButton } from "ui";
+import { Navbar, Carousel, ArrowButton, Footer } from "ui";
 
 export default function Home() {
   return (
     <>
-      <Header />
+      <Navbar />
       <section className="ml-28 py-24 flex justify-center gap-20">
         <div className="w-[25rem] my-auto">
           <h1 className="mb-4 font-extrabold text-6xl text-primary-black">Patient registrations you&apos;ll love.</h1>
@@ -64,12 +64,12 @@ export default function Home() {
       </section>
       <section className="px-36 py-24 hidden-css">
         <h1 className="mb-12 text-4xl font-bold text-primary-black">Trusted by 100+ innovative NHS practices</h1>
-        <Link
-          className="right-40 translate-y-8 absolute flex items-center gap-1 text-primary-blue hover:underline hover:decoration-[3px] hover:underline-offset-4 hover:decoration-primary-blue"
-          id="case-studies"
-          href="/case-studies"
-        >
-          View case studies <ArrowButton size={"xl"} />
+        <Link className="right-40 translate-y-8 absolute flex items-center gap-1 font-medium text-primary-blue hovering" href="/case-studies">
+          <span>
+            View case studies
+            <div className="w-[140px] h-[3px] bg-primary-blue absolute opacity-0 transition-all duration-400 hovering-underline" />
+          </span>
+          <ArrowButton size={"5"} />
         </Link>
         <Image
           className="mx-auto"
@@ -80,6 +80,19 @@ export default function Home() {
         ></Image>
         <Carousel />
       </section>
+      <section className="pb-24 bg-light-blue">
+        <div className="overflow-hidden leading-[0] fill-primary-white">
+          <svg className="w-[calc(140%+1.3px)] h-36 relative block" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+              className="fill-primary-white"
+            ></path>
+          </svg>
+        </div>
+        <h1 className="px-36 pt-8 text-4xl font-bold text-primary-black hidden-css">Book a demo</h1>
+        <div className="calendly-inline-widget" data-url="https://calendly.com/d/ypv-wvw-vwy/automating-registrations-with-healthtech-1" style={{ minWidth: "320px", height: "700px" }}></div>
+      </section>
+      <Footer />
     </>
   );
 }

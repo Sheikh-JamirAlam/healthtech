@@ -5,14 +5,9 @@
 :root {
   --bg-color: #fcfffe;
   --text-color: #121212;
-}
+  --primary-blue: #4968e0;
 
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #121212;
-    --text-color: #fcfffe;
-  }
-} */
+}
 
 body {
   color: var(--text-color);
@@ -36,14 +31,19 @@ body {
   transform: translateY(0);
 }
 
-a:has(>.hovering) {
-  &:hover {
-    &>.hovering {
-      background-color: #4968e0;
-    }
+.hovering:hover {
+
+  &>span>.hovering-underline,
+  &>.hovering-underline {
+    opacity: 1;
+  }
+
+  &>.hovering-icon {
+    background-color: var(--primary-blue);
 
     &>svg {
-      color: #fcfffe;
+      color: var(--bg-color);
     }
   }
+
 }

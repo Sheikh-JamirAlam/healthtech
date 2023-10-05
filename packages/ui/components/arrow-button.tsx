@@ -8,9 +8,8 @@ interface PropType {
 
 export function ArrowButton({ size }: PropType): JSX.Element {
   return (
-    <>
-      <div className="w-[20px] h-[20px] rounded-full absolute right-[2px] z-0 hovering" />
-      <Icon className="w-6 h-6 z-10" icon="uit:arrow-circle-right" />
-    </>
+    <div className={`w-${size} h-${size} rounded-full border-2 border-primary-blue flex justify-center items-center transition-all duration-400 hovering-icon`}>
+      <Icon className="w-[100%] h-[100%] transition-all duration-400" icon="material-symbols:arrow-forward" />
+    </div>
   );
 }
