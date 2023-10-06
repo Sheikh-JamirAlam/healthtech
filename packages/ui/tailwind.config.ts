@@ -11,6 +11,7 @@ const config: Config = {
         "secondary-blue": "#384469",
         "primary-grey": "#6b6768",
         "light-blue": "#f3f8fc",
+        "accent-blue": "#bad3e8",
       },
       flex: {
         "100": "0 0 100%",
