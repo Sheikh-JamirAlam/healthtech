@@ -11,8 +11,8 @@ export default function Home() {
           <h1 className="mb-4 font-extrabold text-6xl text-primary-black">Patient registrations you&apos;ll love.</h1>
           <p className="mb-6 font-bold text-2xl text-primary-black">Faster, Safer, Automated ⚡️</p>
           <div className="mb-6 text-primary-white flex gap-12">
-            <button className="py-3 px-7 rounded-xl bg-primary-blue">Book a demo</button>
-            <button className="py-3 px-7 rounded-xl bg-primary-blue">Test our form</button>
+            <button className="py-3 px-7 rounded-xl bg-primary-blue outline-none shadow-lg transform hover:bg-secondary-blue active:scale-90 transition-transform">Book a demo</button>
+            <button className="py-3 px-7 rounded-xl bg-primary-blue outline-none shadow-lg transform hover:bg-secondary-blue active:scale-90 transition-transform">Test our form</button>
           </div>
           <div className="text-sm grid grid-cols-2 items-center">
             <p className="mb-2">✅ Integrated with EMIS</p>
@@ -28,7 +28,9 @@ export default function Home() {
           <div className="w-[20%]">
             <h2 className="w-[80%] text-4xl font-bold hidden-css">Go live in 29 mins</h2>
             <p className="my-6 text-primary-grey hidden-css">The point of registration is an important moment to set your patients up for success.</p>
-            <button className="px-6 py-4 font-medium rounded-xl text-primary-white bg-primary-blue hidden-css">Learn more</button>
+            <button className="px-6 py-4 font-medium rounded-xl text-primary-white bg-primary-blue outline-none shadow-lg hover:bg-secondary-blue active:scale-90 active:transition-transform hidden-css">
+              Learn more
+            </button>
           </div>
           <div className="w-[60%] grid grid-cols-2 gap-20">
             <div className="hidden-css">
