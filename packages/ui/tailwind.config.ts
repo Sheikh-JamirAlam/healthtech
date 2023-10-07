@@ -16,6 +16,9 @@ const config: Config = {
       flex: {
         "100": "0 0 100%",
       },
+      screens: {
+        mobile: "992px",
+      },
     },
   },
   plugins: [],

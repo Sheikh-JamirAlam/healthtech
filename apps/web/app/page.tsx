@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Navbar, Carousel, ArrowButton, Footer } from "ui";
+import { Navbar, MobileNavbar, Carousel, ArrowButton, Footer } from "ui";
 
 export default function Home() {
   return (
     <>
       <Navbar />
+      <MobileNavbar />
       <section className="ml-28 py-24 flex justify-center gap-20">
         <div className="w-[25rem] my-auto">
           <h1 className="mb-4 font-extrabold text-6xl text-primary-black">Patient registrations you&apos;ll love.</h1>
