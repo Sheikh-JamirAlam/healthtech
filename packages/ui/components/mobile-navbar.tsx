@@ -2,26 +2,16 @@
 
 import { motion, useCycle } from "framer-motion";
 import type { Variants } from "framer-motion";
+import { Icon } from "@iconify/react";
 
-// const sidebar: Variants = {
-//   open: (height = 1000) => ({
-//     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
-//     transition: {
-//       type: "spring",
-//       stiffness: 20,
-//       restDelta: 2,
-//     },
-//   }),
-//   closed: {
-//     clipPath: "circle(25px at 35px 31px)",
-//     transition: {
-//       delay: 0.5,
-//       type: "spring",
-//       stiffness: 400,
-//       damping: 40,
-//     },
-//   },
-// };
+const sidebar: Variants = {
+  open: {
+    opacity: 1,
+  },
+  closed: {
+    opacity: 0,
+  },
+};
 
 const navigationVariants: Variants = {
   open: {
@@ -56,22 +46,26 @@ function Path(props: { variants?: { closed: { d?: string; opacity?: number }; op
 export function MobileNavbar(): JSX.Element {
   const [isOpen, toggleOpen] = useCycle(false, true);
 
+  const expand = (target: string): void => {
+    document.getElementById(target)?.classList.toggle("rotate-180");
+  };
+
   return (
-    <main className="py-6 px-16 flex justify-evenly mobile:hidden">
+    <main id="menu" className="w-screen py-6 px-16 absolute flex justify-evenly mobile:hidden z-50 bg-primary-white">
       <div>
         <a href="/">
           <img alt="Healthtech Logo" src="https://uploads-ssl.webflow.com/61114f16d48cb8a800a4f117/64b971031f48da0992c112e5_Screenshot%202023-06-19%20at%2012.15.25.png" className="w-[4rem]" />
         </a>
       </div>
 
-      <motion.nav id="menu" className="w-full text-right pointer-events-none" initial={false} animate={isOpen ? "open" : "closed"}>
+      <motion.nav id="options" className="w-full text-right pointer-events-none" initial={false} animate={isOpen ? "open" : "closed"}>
         <button
           className="h-full rounded-full pointer-events-auto"
           onClick={() => {
             toggleOpen();
-            // document.getElementById("menu")?.classList.toggle("absolute");
-            // document.getElementById("menu")?.classList.toggle("fixed");
-            document.getElementById("menu")?.classList.toggle("pointer-events-none");
+            document.getElementById("menu")?.classList.toggle("absolute");
+            document.getElementById("menu")?.classList.toggle("fixed");
+            document.getElementById("options")?.classList.toggle("pointer-events-none");
           }}
         >
           <svg width="30" height="30" viewBox="0 0 25 25">
@@ -97,32 +91,59 @@ export function MobileNavbar(): JSX.Element {
             />
           </svg>
         </button>
-        {/* <motion.div className="bg-red-400 z-[2] w-full shadow-3xl" variants={sidebar} /> */}
-        <motion.ul className="w-full text-left absolute left-0 p-5 z-[2] " variants={navigationVariants}>
-          <motion.li className="flex items-center mb-5 space-x-6 cursor-pointer" variants={menuItemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-            <span className="ml-[4.5rem] pt-3 flex-1 h-8 rounded-lg">DISCOVER</span>
+        <motion.div className="w-full h-[21rem] bg-primary-white absolute left-0 shadow-xl" variants={sidebar} />
+        <motion.ul className="w-full text-left absolute left-0 pt-2 pb-8 px-12" variants={navigationVariants}>
+          <motion.li className="flex justify-between items-end px-4 py-2 border-b-2" variants={menuItemVariants}>
+            <div className="pt-4 rounded-lg cursor-pointer">Solutions</div>
+            <Icon
+              id="solutions"
+              className="w-fit text-2xl cursor-pointer transition-all"
+              icon="material-symbols:keyboard-arrow-down"
+              onClick={() => {
+                expand("solutions");
+              }}
+            />
           </motion.li>
-          <motion.li className="flex items-center mb-5 space-x-6 cursor-pointer" variants={menuItemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-            <span className="ml-[4.5rem] pt-3 flex-1 h-8 rounded-lg">FOLLOWING</span>
+          <motion.li className="flex justify-between items-end px-4 py-2 border-b-2" variants={menuItemVariants}>
+            <div className="pt-4 rounded-lg cursor-pointer">Resources</div>
+            <Icon
+              id="resources"
+              className="w-fit text-2xl cursor-pointer transition-all"
+              icon="material-symbols:keyboard-arrow-down"
+              onClick={() => {
+                expand("resources");
+              }}
+            />
           </motion.li>
-          <motion.li className="flex items-center mb-5 space-x-6 cursor-pointer" variants={menuItemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-            <span className="ml-[4.5rem] pt-3 flex-1 h-8 rounded-lg">CHAT-GPT</span>
+          <motion.li className="flex justify-between items-end px-4 py-2 border-b-2" variants={menuItemVariants}>
+            <div className="pt-4 rounded-lg cursor-pointer">Company</div>
+            <Icon
+              id="company"
+              className="w-fit text-2xl cursor-pointer transition-all"
+              icon="material-symbols:keyboard-arrow-down"
+              onClick={() => {
+                expand("company");
+              }}
+            />
           </motion.li>
-          <motion.li className="flex items-center mb-5 space-x-6 cursor-pointer" variants={menuItemVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-            <span className="ml-[4.5rem] pt-3 flex-1 h-8 rounded-lg">CREATE</span>
+          <motion.li className="flex justify-between items-end px-4 py-2 border-b-2" variants={menuItemVariants}>
+            <div className="pt-4 rounded-lg cursor-pointer">Careers</div>
+            <Icon
+              id="careers"
+              className="w-fit text-2xl cursor-pointer transition-all"
+              icon="material-symbols:keyboard-arrow-down"
+              onClick={() => {
+                expand("careers");
+              }}
+            />
+          </motion.li>
+          <motion.li className="px-2 py-6" variants={menuItemVariants}>
+            <button className="py-3 px-4 rounded-xl text-primary-white bg-primary-blue outline-none shadow-lg transform hover:bg-accent-blue hover:text-primary-black active:scale-90 transition-all">
+              Start for free
+            </button>
           </motion.li>
         </motion.ul>
       </motion.nav>
-
-      {/* <div className="text-lg font-medium text-center grid grid-flow-col gap-5 content-center items-center">
-        <span className="w-24 cursor-pointer">Solutions</span>
-        <span className="w-24 cursor-pointer">Resources</span>
-        <span className="w-24 cursor-pointer">Company</span>
-        <span className="w-24 cursor-pointer">Careers</span>
-      </div>
-      <div className="my-auto text-primary-white font-medium">
-        <button className="py-4 px-7 rounded-xl bg-primary-blue outline-none shadow-lg transform hover:bg-accent-blue hover:text-primary-black active:scale-90 transition-all">Start for free</button>
-      </div> */}
     </main>
   );
 }

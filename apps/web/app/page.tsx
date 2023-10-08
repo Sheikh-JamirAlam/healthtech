@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Navbar />
       <MobileNavbar />
-      <section className="ml-28 py-24 flex justify-center gap-20">
+      <section className="ml-28 pt-52 pb-24 flex justify-center gap-20">
         <div className="w-[25rem] my-auto">
           <h1 className="mb-4 font-extrabold text-6xl text-primary-black">Patient registrations you&apos;ll love.</h1>
           <p className="mb-6 font-bold text-2xl text-primary-black">Faster, Safer, Automated ⚡️</p>
@@ -70,7 +70,7 @@ export default function Home() {
         <Link className="right-40 translate-y-8 absolute flex items-center gap-1 font-medium text-primary-blue hovering" href="/case-studies">
           <span>
             View case studies
-            <div className="w-[140px] h-[3px] bg-primary-blue absolute opacity-0 transition-all duration-400 hovering-underline" />
+            <div className="w-[140px] h-[3px] bg-primary-blue absolute opacity-0 transition-all hovering-underline" />
           </span>
           <ArrowButton size={"5"} />
         </Link>

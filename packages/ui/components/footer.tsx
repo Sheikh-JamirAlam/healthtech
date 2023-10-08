@@ -31,11 +31,11 @@ export function Footer(): JSX.Element {
         <p>© Healthtech 1 LTD 2023. All rights reserved.</p>
         <div className="flex">
           <span className="hovering cursor-pointer">
-            Contact Us <div className="w-[100%] h-[3px] bg-primary-blue opacity-0 transition-all duration-400 hovering-underline" />
+            Contact Us <div className="w-[100%] h-[3px] bg-primary-blue opacity-0 transition-all duration-300 hovering-underline" />
           </span>
           <span className="mx-2">|</span>
           <span className="hovering cursor-pointer">
-            Privacy Policy <div className="w-[100%] h-[3px] bg-primary-blue opacity-0 transition-all duration-400 hovering-underline" />
+            Privacy Policy <div className="w-[100%] h-[3px] bg-primary-blue opacity-0 transition-all duration-300 hovering-underline" />
           </span>
         </div>
       </div>
