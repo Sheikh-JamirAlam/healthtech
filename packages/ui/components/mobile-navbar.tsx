@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import { motion, useCycle } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { Icon } from "@iconify/react";
@@ -10,12 +11,13 @@ const sidebar: Variants = {
   },
   closed: {
     opacity: 0,
+    transition: { delay: 0.2 },
   },
 };
 
 const navigationVariants: Variants = {
   open: {
-    transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+    transition: { staggerChildren: 0.07 },
   },
   closed: {
     transition: { staggerChildren: 0.05, staggerDirection: -1 },
@@ -31,7 +33,7 @@ const menuItemVariants: Variants = {
     },
   },
   closed: {
-    y: 50,
+    y: 0,
     opacity: 0,
     transition: {
       y: { stiffness: 1000 },
@@ -39,15 +41,29 @@ const menuItemVariants: Variants = {
   },
 };
 
+interface ExpandedState {
+  solutions: boolean;
+  resources: boolean;
+  company: boolean;
+  careers: boolean;
+}
+
 function Path(props: { variants?: { closed: { d?: string; opacity?: number }; open: { d?: string; opacity?: number } }; d?: string; transition?: { duration: number } }): JSX.Element {
   return <motion.path fill="transparent" strokeWidth="3" stroke="hsl(0, 0%, 18%)" strokeLinecap="round" {...props} />;
 }
 
 export function MobileNavbar(): JSX.Element {
   const [isOpen, toggleOpen] = useCycle(false, true);
+  const [expanded, setExpanded] = useState<ExpandedState>({ solutions: false, resources: false, company: false, careers: false });
 
   const expand = (target: string): void => {
-    document.getElementById(target)?.classList.toggle("rotate-180");
+    setExpanded((prevState) => {
+      const updatedState: ExpandedState = { ...prevState };
+      Object.keys(updatedState).forEach((key) => {
+        updatedState[key as keyof ExpandedState] = key === target ? !prevState[key as keyof ExpandedState] : false;
+      });
+      return updatedState;
+    });
   };
 
   return (
@@ -91,51 +107,111 @@ export function MobileNavbar(): JSX.Element {
             />
           </svg>
         </button>
-        <motion.div className="w-full h-[21rem] bg-primary-white absolute left-0 shadow-xl" variants={sidebar} />
+        <motion.div className="w-full h-screen bg-primary-white absolute left-0 shadow-xl" variants={sidebar} />
         <motion.ul className="w-full text-left absolute left-0 pt-2 pb-8 px-12" variants={navigationVariants}>
-          <motion.li className="flex justify-between items-end px-4 py-2 border-b-2" variants={menuItemVariants}>
-            <div className="pt-4 rounded-lg cursor-pointer">Solutions</div>
+          <motion.li className="flex flex-wrap justify-between items-end px-4 py-2 border-b-2" variants={menuItemVariants}>
+            <div className="pt-4 rounded-lg cursor-pointer font-medium">Solutions</div>
             <Icon
               id="solutions"
-              className="w-fit text-2xl cursor-pointer transition-all"
+              className={`w-fit text-2xl cursor-pointer transition-all menu-item ${expanded.solutions && "rotate-180"}`}
               icon="material-symbols:keyboard-arrow-down"
               onClick={() => {
                 expand("solutions");
               }}
             />
+            {expanded.solutions ? (
+              <motion.div
+                className="w-full mt-4 py-4 flex-grow border-t-2 grid grid-cols-2 gap-10 font-semibold text-primary-blue"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                  <p className="pl-6">PATIENT REGISTRATIONS</p>
+                </div>
+                <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                  <p className="pl-6">BLOOD TESTS</p>
+                </div>
+                <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                  <p className="pl-6">PATIENT TRIAGE</p>
+                </div>
+              </motion.div>
+            ) : null}
           </motion.li>
-          <motion.li className="flex justify-between items-end px-4 py-2 border-b-2" variants={menuItemVariants}>
-            <div className="pt-4 rounded-lg cursor-pointer">Resources</div>
+          <motion.li className="flex flex-wrap justify-between items-end px-4 py-2 border-b-2" variants={menuItemVariants}>
+            <div className="pt-4 rounded-lg cursor-pointer font-medium">Resources</div>
             <Icon
               id="resources"
-              className="w-fit text-2xl cursor-pointer transition-all"
+              className={`w-fit text-2xl cursor-pointer transition-all menu-item ${expanded.resources && "rotate-180"}`}
               icon="material-symbols:keyboard-arrow-down"
               onClick={() => {
                 expand("resources");
               }}
             />
+            {expanded.resources ? (
+              <motion.div
+                className="w-full mt-4 py-4 flex-grow border-t-2 grid grid-cols-2 gap-10 font-semibold text-primary-blue"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                  <p className="pl-6">CASE STUDIES</p>
+                </div>
+                <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                  <p className="pl-6">PRACTICE LOVE</p>
+                </div>
+              </motion.div>
+            ) : null}
           </motion.li>
-          <motion.li className="flex justify-between items-end px-4 py-2 border-b-2" variants={menuItemVariants}>
-            <div className="pt-4 rounded-lg cursor-pointer">Company</div>
+          <motion.li className="flex flex-wrap justify-between items-end px-4 py-2 border-b-2" variants={menuItemVariants}>
+            <div className="pt-4 rounded-lg cursor-pointer font-medium">Company</div>
             <Icon
               id="company"
-              className="w-fit text-2xl cursor-pointer transition-all"
+              className={`w-fit text-2xl cursor-pointer transition-all menu-item ${expanded.company && "rotate-180"}`}
               icon="material-symbols:keyboard-arrow-down"
               onClick={() => {
                 expand("company");
               }}
             />
+            {expanded.company ? (
+              <motion.div
+                className="w-full mt-4 py-4 flex-grow border-t-2 grid grid-cols-2 gap-10 font-semibold text-primary-blue"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                  <p className="pl-6">ABOUT US</p>
+                </div>
+                <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                  <p className="pl-6">MEET THE TEAM</p>
+                </div>
+              </motion.div>
+            ) : null}
           </motion.li>
-          <motion.li className="flex justify-between items-end px-4 py-2 border-b-2" variants={menuItemVariants}>
-            <div className="pt-4 rounded-lg cursor-pointer">Careers</div>
+          <motion.li className="flex flex-wrap justify-between items-end px-4 py-2 border-b-2" variants={menuItemVariants}>
+            <div className="pt-4 rounded-lg cursor-pointer font-medium">Careers</div>
             <Icon
               id="careers"
-              className="w-fit text-2xl cursor-pointer transition-all"
+              className={`w-fit text-2xl cursor-pointer transition-all menu-item ${expanded.careers && "rotate-180"}`}
               icon="material-symbols:keyboard-arrow-down"
               onClick={() => {
                 expand("careers");
               }}
             />
+            {expanded.careers ? (
+              <motion.div
+                className="w-full mt-4 py-4 flex-grow border-t-2 grid grid-cols-2 gap-10 font-semibold text-primary-blue"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                  <p className="pl-6">OPEN ROLES</p>
+                </div>
+              </motion.div>
+            ) : null}
           </motion.li>
           <motion.li className="px-2 py-6" variants={menuItemVariants}>
             <button className="py-3 px-4 rounded-xl text-primary-white bg-primary-blue outline-none shadow-lg transform hover:bg-accent-blue hover:text-primary-black active:scale-90 transition-all">

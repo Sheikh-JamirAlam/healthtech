@@ -33,5 +33,6 @@ module.exports = {
     "import/no-default-export": "off",
     "react/button-has-type": [0],
     "react/jsx-sort-props": [1, { noSortAlphabetically: true }],
+    "no-nested-ternary": "off",
   },
 };

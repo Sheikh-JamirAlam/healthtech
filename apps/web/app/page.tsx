@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navbar, MobileNavbar, Carousel, ArrowButton, Footer } from "ui";
 
+// TODO: Responsiveness Hero Area and Footer
+
 export default function Home() {
   return (
     <>

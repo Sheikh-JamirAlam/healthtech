@@ -12,10 +12,18 @@ export function Navbar(): JSX.Element {
             Solutions
             <div className="w-[81px] h-[2px] bg-primary-blue absolute opacity-0 transition-all duration-500 hovering-underline" />
           </button>
-          <div className="w-full pt-6 absolute left-0 bg-primary-white z-50 dropdown-content">
-            <div>Hello World</div>
-            <div>Hello World</div>
-            <div>Hello World</div>
+          <div className="w-full pt-6 pb-10 font-semibold text-primary-blue absolute left-0 bg-primary-white z-50 shadow-xl dropdown-content">
+            <div className="w-[50rem] mx-auto grid grid-cols-2 gap-10">
+              <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                <p className="pl-6">PATIENT REGISTRATIONS</p>
+              </div>
+              <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                <p className="pl-6">BLOOD TESTS</p>
+              </div>
+              <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                <p className="pl-6">PATIENT TRIAGE</p>
+              </div>
+            </div>
           </div>
         </div>
         <div className="h-full dropdown">
@@ -23,10 +31,15 @@ export function Navbar(): JSX.Element {
             Resources
             <div className="w-[90px] h-[2px] bg-primary-blue absolute opacity-0 transition-all duration-500 hovering-underline" />
           </button>
-          <div className="w-full pt-6 absolute left-0 bg-primary-white z-50 dropdown-content">
-            <div>Hello World</div>
-            <div>Hello World</div>
-            <div>Hello World</div>
+          <div className="w-full pt-6 pb-10 font-semibold text-primary-blue absolute left-0 bg-primary-white z-50 shadow-xl dropdown-content">
+            <div className="w-[50rem] mx-auto grid grid-cols-2 gap-10">
+              <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                <p className="pl-6">CASE STUDIES</p>
+              </div>
+              <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                <p className="pl-6">PRACTICE LOVE</p>
+              </div>
+            </div>
           </div>
         </div>
         <div className="h-full dropdown">
@@ -34,10 +47,15 @@ export function Navbar(): JSX.Element {
             Company
             <div className="w-[82px] h-[2px] bg-primary-blue absolute opacity-0 transition-all duration-500 hovering-underline" />
           </button>
-          <div className="w-full pt-6 absolute left-0 bg-primary-white z-50 dropdown-content">
-            <div>Hello World</div>
-            <div>Hello World</div>
-            <div>Hello World</div>
+          <div className="w-full pt-6 pb-10 font-semibold text-primary-blue absolute left-0 bg-primary-white z-50 shadow-xl dropdown-content">
+            <div className="w-[50rem] mx-auto grid grid-cols-2 gap-10">
+              <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                <p className="pl-6">ABOUT US</p>
+              </div>
+              <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                <p className="pl-6">MEET THE TEAM</p>
+              </div>
+            </div>
           </div>
         </div>
         <div className="dropdown">
@@ -45,10 +63,12 @@ export function Navbar(): JSX.Element {
             Careers
             <div className="w-[68px] h-[2px] bg-primary-blue absolute opacity-0 transition-all duration-500 hovering-underline" />
           </button>
-          <div className="w-full pt-6 absolute left-0 bg-primary-white z-50 dropdown-content">
-            <div>Hello World</div>
-            <div>Hello World</div>
-            <div>Hello World</div>
+          <div className="w-full pt-6 pb-10 font-semibold text-primary-blue absolute left-0 bg-primary-white z-50 shadow-xl dropdown-content">
+            <div className="w-[50rem] mx-auto grid grid-cols-2 gap-10">
+              <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                <p className="pl-6">OPEN ROLES</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
