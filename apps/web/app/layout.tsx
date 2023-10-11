@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
-      <Script id="animate" src="/js/move.js" />
+      <Script id="animate" src="/js/app.js" />
       <Script id="calendly" src="https://assets.calendly.com/assets/external/widget.js" async />
     </html>
   );

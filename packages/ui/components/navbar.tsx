@@ -8,7 +8,7 @@ export function Navbar(): JSX.Element {
       </div>
       <div className="text-lg font-medium text-center grid grid-flow-col gap-10 content-center">
         <div className="h-full dropdown">
-          <button className="py-6 dropdown-btn hovering">
+          <button className="py-6 hovering">
             Solutions
             <div className="w-[81px] h-[2px] bg-primary-blue absolute opacity-0 transition-all duration-500 hovering-underline" />
           </button>
@@ -27,7 +27,7 @@ export function Navbar(): JSX.Element {
           </div>
         </div>
         <div className="h-full dropdown">
-          <button className="py-6 dropdown-btn hovering">
+          <button className="py-6 hovering">
             Resources
             <div className="w-[90px] h-[2px] bg-primary-blue absolute opacity-0 transition-all duration-500 hovering-underline" />
           </button>
@@ -43,7 +43,7 @@ export function Navbar(): JSX.Element {
           </div>
         </div>
         <div className="h-full dropdown">
-          <button className="py-6 dropdown-btn hovering">
+          <button className="py-6 hovering">
             Company
             <div className="w-[82px] h-[2px] bg-primary-blue absolute opacity-0 transition-all duration-500 hovering-underline" />
           </button>
@@ -59,7 +59,7 @@ export function Navbar(): JSX.Element {
           </div>
         </div>
         <div className="dropdown">
-          <button className="py-6 dropdown-btn hovering">
+          <button className="py-6 hovering">
             Careers
             <div className="w-[68px] h-[2px] bg-primary-blue absolute opacity-0 transition-all duration-500 hovering-underline" />
           </button>

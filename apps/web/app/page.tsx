@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Navbar, MobileNavbar, Carousel, ArrowButton, Footer } from "ui";
+import { Navbar, MobileNavbar, Carousel, ArrowButton, Footer, IntroductionLoom } from "ui";
 
 // TODO: iframe setup
 
@@ -24,7 +24,8 @@ export default function Home() {
             <Image src="/systemone.png" alt="SystmOne" width={100} height={100} />
           </div>
         </div>
-        <div className="w-[34rem] h-[34rem] flex justify-center items-center transition-all duration-300 hover:grayscale">
+        <IntroductionLoom />
+        {/* <div className="w-[34rem] h-[34rem] flex justify-center items-center transition-all duration-300 hover:grayscale">
           <div className="w-full h-full">
             <Image
               className="w-full h-full object-cover rounded-3xl"
@@ -54,7 +55,7 @@ export default function Home() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </section>
       <section className="bg-light-blue">
         <div className="px-[10%] pt-36 flex flex-col gap-12 lg:gap-0 lg:flex-row justify-between">

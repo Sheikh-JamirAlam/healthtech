@@ -37,8 +37,7 @@ body {
 
 .hovering:hover {
 
-  &>span>.hovering-underline,
-  &>.hovering-underline {
+  & .hovering-underline {
     opacity: 1;
   }
 
@@ -60,6 +59,10 @@ body {
   }
 
   &:hover {
+    & .hovering-underline {
+      opacity: 1;
+    }
+
     & .dropdown-content {
       pointer-events: auto;
       opacity: 1;
