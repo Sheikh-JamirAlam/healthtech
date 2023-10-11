@@ -2,14 +2,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navbar, MobileNavbar, Carousel, ArrowButton, Footer } from "ui";
 
-// TODO: Responsiveness Hero Area and Footer
+// TODO: iframe setup
 
 export default function Home() {
   return (
     <>
       <Navbar />
       <MobileNavbar />
-      <section className="ml-28 pt-52 pb-24 flex justify-center gap-20">
+      <section className="pt-52 pb-24 flex flex-col mobile:flex-row justify-center lg:gap-10 xl:gap-20">
         <div className="w-[25rem] my-auto">
           <h1 className="mb-4 font-extrabold text-6xl text-primary-black">Patient registrations you&apos;ll love.</h1>
           <p className="mb-6 font-bold text-2xl text-primary-black">Faster, Safer, Automated ⚡️</p>
@@ -24,7 +24,37 @@ export default function Home() {
             <Image src="/systemone.png" alt="SystmOne" width={100} height={100} />
           </div>
         </div>
-        <div className="w-[35rem] h-[35rem] bg-slate-600 rounded-3xl"></div>
+        <div className="w-[34rem] h-[34rem] flex justify-center items-center transition-all duration-300 hover:grayscale">
+          <div className="w-full h-full">
+            <Image
+              className="w-full h-full object-cover rounded-3xl"
+              src="https://uploads-ssl.webflow.com/61114f16d48cb8a800a4f117/6449689e17db15e15c7852a1_Perfocal_27-04-21_8XNI7O4T_229.jpeg_standard-p-1080.jpg"
+              width={1000}
+              height={1000}
+              alt="Intro"
+            />
+            <iframe
+              className="embedly-embed"
+              src="//cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.loom.com%2Fembed%2F30eadc35df9946cab305b4a81eb21f80&display_name=Loom&url=https%3A%2F%2Fwww.loom.com%2Fshare%2F30eadc35df9946cab305b4a81eb21f80&image=https%3A%2F%2Fcdn.loom.com%2Fsessions%2Fthumbnails%2F30eadc35df9946cab305b4a81eb21f80-00001.gif&key=c4e54deccf4d4ec997a64902e9a30300&type=text%2Fhtml&schema=loom\"
+              width="940"
+              height="705"
+              title="Loom embed"
+              allow="autoplay; fullscreen"
+              allowFullScreen={true}
+            ></iframe>
+          </div>
+          <div className="w-28 h-28 bg-primary-white rounded-full absolute flex justify-center items-center overflow-hidden">
+            <div className="w-8 h-8 flex justify-center items-center">
+              <Image
+                className="w-full h-full object-contain"
+                src="https://uploads-ssl.webflow.com/61114f16d48cb8a800a4f117/63fe36bb1f67ba815a5e34a8_Vector-min.png"
+                width={30}
+                height={30}
+                alt="Play button"
+              />
+            </div>
+          </div>
+        </div>
       </section>
       <section className="bg-light-blue">
         <div className="px-[10%] pt-36 flex flex-col gap-12 lg:gap-0 lg:flex-row justify-between">
@@ -67,9 +97,12 @@ export default function Home() {
           </svg>
         </div>
       </section>
-      <section className="px-36 py-24 hidden-css">
+      <section className="px-[5%] lg:px-36 py-24 hidden-css">
         <h1 className="mb-12 text-4xl font-bold text-primary-black">Trusted by 100+ innovative NHS practices</h1>
-        <Link className="right-40 translate-y-8 absolute flex items-center gap-1 font-medium text-primary-blue hovering" href="/case-studies">
+        <Link
+          className="max-[500px]:right-10 right-20 md:right-40 text-xs sm:text-base translate-y-4 sm:translate-y-8 absolute flex items-center gap-1 font-medium text-primary-blue hovering"
+          href="/case-studies"
+        >
           <span>
             View case studies
             <div className="w-[140px] h-[3px] bg-primary-blue absolute opacity-0 transition-all hovering-underline" />

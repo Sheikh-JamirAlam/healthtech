@@ -9,6 +9,10 @@
 
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   color: var(--text-color);
   background: var(--bg-color);
