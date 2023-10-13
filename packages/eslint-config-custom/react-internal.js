@@ -35,5 +35,7 @@ module.exports = {
     "react/no-array-index-key": "off",
     "react/jsx-sort-props": [1, { noSortAlphabetically: true }],
     "no-nested-ternary": "off",
+    "@typescript-eslint/no-confusing-void-expression": "off",
+    "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",
   },
 };
