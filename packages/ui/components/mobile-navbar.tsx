@@ -67,7 +67,7 @@ export function MobileNavbar(): JSX.Element {
   };
 
   return (
-    <main id="menu" className="w-screen py-6 px-16 absolute flex justify-evenly mobile:hidden z-50 bg-primary-white">
+    <main id="menu" className="w-full py-6 px-16 absolute flex justify-evenly mobile:hidden z-50 bg-primary-white">
       <div>
         <a href="/">
           <img alt="Healthtech Logo" src="https://uploads-ssl.webflow.com/61114f16d48cb8a800a4f117/64b971031f48da0992c112e5_Screenshot%202023-06-19%20at%2012.15.25.png" className="w-[4rem]" />

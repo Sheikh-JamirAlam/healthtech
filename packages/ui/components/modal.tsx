@@ -18,7 +18,7 @@ export function Modal({ handleVisibility, isClosed }: PropTypes): JSX.Element {
         setTimeout(() => {
           document.getElementById("loading")?.classList.add("hidden");
           iframe?.classList.toggle("hidden");
-        }, 1500);
+        }, 1000);
       };
       iframe?.addEventListener("load", handleLoad);
       modalBackdrop?.addEventListener("click", handleVisibility);

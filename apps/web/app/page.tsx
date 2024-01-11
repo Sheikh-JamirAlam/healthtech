@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Navbar, MobileNavbar, Carousel, ArrowButton, Footer, IntroductionLoom, Modal } from "ui";
+import { Navbar, MobileNavbar, Carousel, ArrowButton, Footer, IntroductionLoom, Modal, Notifications } from "ui";
 
 // TODO: Navbar options
 
@@ -105,6 +105,7 @@ export default function Home() {
         <div className="calendly-inline-widget" data-url="https://calendly.com/d/ypv-wvw-vwy/automating-registrations-with-healthtech-1" style={{ minWidth: "320px", height: "700px" }}></div>
       </section>
       <Footer />
+      <Notifications />
     </main>
   );
 }
