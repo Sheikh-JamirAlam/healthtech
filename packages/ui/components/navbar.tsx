@@ -1,6 +1,6 @@
 export function Navbar(): JSX.Element {
   return (
-    <main className="w-full p-6 mobile:flex mobile:justify-evenly hidden absolute">
+    <main className="w-full p-6 mobile:flex mobile:justify-evenly hidden absolute border-t-[1rem] border-primary-blue">
       <div>
         <a href="/">
           <img alt="Healthtech Logo" src="https://uploads-ssl.webflow.com/61114f16d48cb8a800a4f117/64b971031f48da0992c112e5_Screenshot%202023-06-19%20at%2012.15.25.png" className="w-[4rem]" />
