@@ -9,6 +9,7 @@ const config: Config = {
         "primary-black": "#242424",
         "primary-blue": "#4968e0",
         "secondary-blue": "#384469",
+        "darker-blue": "#314594",
         "primary-grey": "#6b6768",
         "secondary-grey": "#d8e3ed",
         "light-blue": "#f3f8fc",

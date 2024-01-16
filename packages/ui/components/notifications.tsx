@@ -8,7 +8,7 @@ export function Notifications(): JSX.Element {
   const notify = () =>
     toast.custom(
       (t) => (
-        <div className={`${t.visible ? "animate-enter" : "animate-leave"} max-w-[40rem] w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}>
+        <div className={`${t.visible ? "animate-enter" : "animate-leave"} max-w-[40rem] w-full bg-primary-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5`}>
           <div className="flex-1 w-0 p-4">
             <p className="font-medium text-gray-900">
               We&apos;re inviting practices to our automated blood test result filing and auto-creating blood tests pilot.&nbsp;

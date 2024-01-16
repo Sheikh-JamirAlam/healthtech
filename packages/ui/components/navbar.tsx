@@ -1,3 +1,5 @@
+import { Registration, BloodTest, Triage, CaseStudy, PracticeLove, AboutUs, OpenRoles } from "./icons";
+
 export function Navbar(): JSX.Element {
   return (
     <main className="w-full p-6 mobile:flex mobile:justify-evenly hidden absolute border-t-[1rem] border-primary-blue">
@@ -15,13 +17,16 @@ export function Navbar(): JSX.Element {
           <div className="w-full pt-6 pb-10 font-semibold text-primary-blue absolute left-0 bg-primary-white z-50 shadow-xl dropdown-content">
             <div className="w-[50rem] mx-auto grid grid-cols-2 gap-10">
               <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                <p className="pl-6">PATIENT REGISTRATIONS</p>
+                <Registration />
+                <p className="pl-2">PATIENT REGISTRATIONS</p>
               </div>
               <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                <p className="pl-6">BLOOD TESTS</p>
+                <BloodTest />
+                <p className="pl-2">BLOOD TESTS</p>
               </div>
               <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                <p className="pl-6">PATIENT TRIAGE</p>
+                <Triage />
+                <p className="pl-2">PATIENT TRIAGE</p>
               </div>
             </div>
           </div>
@@ -34,10 +39,12 @@ export function Navbar(): JSX.Element {
           <div className="w-full pt-6 pb-10 font-semibold text-primary-blue absolute left-0 bg-primary-white z-50 shadow-xl dropdown-content">
             <div className="w-[50rem] mx-auto grid grid-cols-2 gap-10">
               <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                <p className="pl-6">CASE STUDIES</p>
+                <CaseStudy />
+                <p className="pl-2">CASE STUDIES</p>
               </div>
               <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                <p className="pl-6">PRACTICE LOVE</p>
+                <PracticeLove />
+                <p className="pl-2">PRACTICE LOVE</p>
               </div>
             </div>
           </div>
@@ -50,10 +57,8 @@ export function Navbar(): JSX.Element {
           <div className="w-full pt-6 pb-10 font-semibold text-primary-blue absolute left-0 bg-primary-white z-50 shadow-xl dropdown-content">
             <div className="w-[50rem] mx-auto grid grid-cols-2 gap-10">
               <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                <p className="pl-6">ABOUT US</p>
-              </div>
-              <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                <p className="pl-6">MEET THE TEAM</p>
+                <AboutUs />
+                <p className="pl-2">MEET THE TEAM</p>
               </div>
             </div>
           </div>
@@ -66,7 +71,8 @@ export function Navbar(): JSX.Element {
           <div className="w-full pt-6 pb-10 font-semibold text-primary-blue absolute left-0 bg-primary-white z-50 shadow-xl dropdown-content">
             <div className="w-[50rem] mx-auto grid grid-cols-2 gap-10">
               <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                <p className="pl-6">OPEN ROLES</p>
+                <OpenRoles />
+                <p className="pl-2">OPEN ROLES</p>
               </div>
             </div>
           </div>
