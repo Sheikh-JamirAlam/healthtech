@@ -22,7 +22,7 @@ export function Registration(): JSX.Element {
   );
 }
 
-export function BloodTest(): JSX.Element {
+export function LabReports(): JSX.Element {
   return (
     <div className="text-2xl ml-3">
       <Icon className="text-darker-blue transition-all" icon="streamline:checkup-medical-report-clipboard" />

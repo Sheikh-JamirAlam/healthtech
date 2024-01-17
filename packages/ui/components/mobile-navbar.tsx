@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, useCycle } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { Icon } from "@iconify/react";
-import { Registration, BloodTest, Triage, CaseStudy, PracticeLove, Team, OpenRoles } from "./icons";
+import { Registration, LabReports, Triage, CaseStudy, PracticeLove, Team, OpenRoles } from "./icons";
 
 const sidebar: Variants = {
   open: {
@@ -132,8 +132,8 @@ export function MobileNavbar(): JSX.Element {
                   <p className="pl-2">PATIENT REGISTRATIONS</p>
                 </div>
                 <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                  <BloodTest />
-                  <p className="pl-2">BLOOD TESTS</p>
+                  <LabReports />
+                  <p className="pl-2">LAB REPORTS</p>
                 </div>
                 <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
                   <Triage />
