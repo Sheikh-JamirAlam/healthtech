@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Navbar, MobileNavbar, Carousel, ArrowButton, Footer, IntroductionLoom, Modal, Notifications } from "ui";
-
-// TODO: Navbar options
+import { Navbar, MobileNavbar, Carousel, ArrowButton, Footer, IntroductionLoom, Notifications } from "ui";
 
 export default function Home() {
   return (
@@ -14,9 +12,11 @@ export default function Home() {
           <h1 className="mb-4 font-extrabold text-4xl md:text-6xl text-primary-black">Patient registrations you&apos;ll love.</h1>
           <p className="mb-6 font-bold text-xl md:text-2xl text-primary-black">Faster, Safer, Automated ⚡️</p>
           <div className="mb-6 text-primary-white flex gap-2 md:gap-12">
-            <button className="py-2 px-4 md:py-3 md:px-7 text-sm md:text-base rounded-xl bg-primary-blue outline-none shadow-lg transform hover:bg-secondary-blue active:scale-90 transition-all">
-              Book a demo
-            </button>
+            <Link href="/#Contact-Form">
+              <button className="py-2 px-4 md:py-3 md:px-7 text-sm md:text-base rounded-xl bg-primary-blue outline-none shadow-lg transform hover:bg-secondary-blue active:scale-90 transition-all">
+                Book a demo
+              </button>
+            </Link>
             <button className="py-2 px-4 md:py-3 md:px-7 text-sm md:text-base rounded-xl bg-primary-blue outline-none shadow-lg transform hover:bg-secondary-blue active:scale-90 transition-all">
               Test our form
             </button>
@@ -35,9 +35,11 @@ export default function Home() {
           <div className="w-[80%] lg:w-[20%] mx-auto lg:mx-0">
             <h2 className="w-[80%] text-4xl font-bold hidden-css">Go live in 29 mins</h2>
             <p className="my-6 text-primary-grey hidden-css">The point of registration is an important moment to set your patients up for success.</p>
-            <button className="px-6 py-4 font-medium rounded-xl text-primary-white bg-primary-blue outline-none shadow-lg hover:bg-secondary-blue hover:transition-all active:scale-90 active:transition-transform hidden-css">
-              Learn more
-            </button>
+            <Link href="/#Contact-Form">
+              <button className="px-6 py-4 font-medium rounded-xl text-primary-white bg-primary-blue outline-none shadow-lg hover:bg-secondary-blue hover:transition-all active:scale-90 active:transition-transform hidden-css">
+                Learn more
+              </button>
+            </Link>
           </div>
           <div className="w-[80%] lg:w-[60%] mx-auto lg:mx-0 grid grid-cols-2 gap-20">
             <div className="hidden-css">
@@ -101,8 +103,10 @@ export default function Home() {
             ></path>
           </svg>
         </div>
-        <h1 className="text-center lg:text-left lg:px-56 pt-8 text-4xl font-bold text-primary-black hidden-css">Book a demo</h1>
-        <div className="calendly-inline-widget" data-url="https://calendly.com/d/ypv-wvw-vwy/automating-registrations-with-healthtech-1" style={{ minWidth: "320px", height: "700px" }}></div>
+        <div id="Contact-Form">
+          <h1 className="text-center lg:text-left lg:px-56 pt-8 text-4xl font-bold text-primary-black hidden-css">Book a demo</h1>
+          <div className="calendly-inline-widget" data-url="https://calendly.com/hi-with-pete/automating-lab-reports-with-healthtech-1" style={{ minWidth: "320px", height: "700px" }}></div>
+        </div>
       </section>
       <Footer />
       <Notifications />

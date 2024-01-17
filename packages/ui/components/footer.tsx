@@ -35,7 +35,8 @@ export function Footer(): JSX.Element {
           </span>
           <span className="mx-2">|</span>
           <span className="hovering cursor-pointer">
-            Privacy Policy <div className="w-[100%] h-[3px] bg-primary-blue opacity-0 transition-all duration-300 hovering-underline" />
+            <a href="https://docs.healthtech1.uk/general-privacy-policy">Privacy Policy</a>{" "}
+            <div className="w-[100%] h-[3px] bg-primary-blue opacity-0 transition-all duration-300 hovering-underline" />
           </span>
         </div>
       </div>

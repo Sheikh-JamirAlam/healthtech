@@ -33,7 +33,7 @@ export function BloodTest(): JSX.Element {
 export function Triage(): JSX.Element {
   return (
     <div className="text-2xl ml-3">
-      <Icon className="text-darker-blue transition-all" icon="fluent:patient-32-filled" />
+      <Icon className="text-darker-blue transition-all" icon="bi:file-medical" />
     </div>
   );
 }
@@ -49,15 +49,15 @@ export function CaseStudy(): JSX.Element {
 export function PracticeLove(): JSX.Element {
   return (
     <div className="text-2xl ml-3">
-      <Icon className="text-darker-blue transition-all" icon="mdi:hand-heart-outline" />
+      <Icon className="text-darker-blue transition-all" icon="ph:hand-heart-bold" />
     </div>
   );
 }
 
-export function AboutUs(): JSX.Element {
+export function Team(): JSX.Element {
   return (
     <div className="text-2xl ml-3">
-      <Icon className="text-darker-blue transition-all" icon="fluent:people-chat-20-regular" />
+      <Icon className="text-darker-blue transition-all" icon="akar-icons:people-group" />
     </div>
   );
 }

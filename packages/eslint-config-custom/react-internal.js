@@ -37,5 +37,8 @@ module.exports = {
     "no-nested-ternary": "off",
     "@typescript-eslint/no-confusing-void-expression": "off",
     "@typescript-eslint/no-unnecessary-boolean-literal-compare": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
   },
 };

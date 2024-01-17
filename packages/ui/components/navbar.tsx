@@ -1,4 +1,4 @@
-import { Registration, BloodTest, Triage, CaseStudy, PracticeLove, AboutUs, OpenRoles } from "./icons";
+import { Registration, BloodTest, Triage, CaseStudy, PracticeLove, Team, OpenRoles } from "./icons";
 
 export function Navbar(): JSX.Element {
   return (
@@ -57,7 +57,7 @@ export function Navbar(): JSX.Element {
           <div className="w-full pt-6 pb-10 font-semibold text-primary-blue absolute left-0 bg-primary-white z-50 shadow-xl dropdown-content">
             <div className="w-[50rem] mx-auto grid grid-cols-2 gap-10">
               <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                <AboutUs />
+                <Team />
                 <p className="pl-2">MEET THE TEAM</p>
               </div>
             </div>

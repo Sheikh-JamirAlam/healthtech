@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, useCycle } from "framer-motion";
 import type { Variants } from "framer-motion";
 import { Icon } from "@iconify/react";
+import { Registration, BloodTest, Triage, CaseStudy, PracticeLove, Team, OpenRoles } from "./icons";
 
 const sidebar: Variants = {
   open: {
@@ -110,15 +111,15 @@ export function MobileNavbar(): JSX.Element {
         <motion.div className="w-full h-screen bg-primary-white absolute left-0 shadow-xl" variants={sidebar} />
         <motion.ul className="w-full text-left absolute left-0 pt-2 pb-8 px-12" variants={navigationVariants}>
           <motion.li className="flex flex-wrap justify-between items-end px-4 py-2 border-b-2" variants={menuItemVariants}>
-            <div className="pt-4 rounded-lg cursor-pointer font-medium">Solutions</div>
-            <Icon
-              id="solutions"
-              className={`w-fit text-2xl cursor-pointer transition-all menu-item ${expanded.solutions && "rotate-180"}`}
-              icon="material-symbols:keyboard-arrow-down"
+            <div
+              className="w-full flex justify-between items-end"
               onClick={() => {
                 expand("solutions");
               }}
-            />
+            >
+              <div className="pt-4 rounded-lg cursor-pointer font-medium">Solutions</div>
+              <Icon id="solutions" className={`w-fit text-2xl cursor-pointer transition-all menu-item ${expanded.solutions && "rotate-180"}`} icon="material-symbols:keyboard-arrow-down" />
+            </div>
             {expanded.solutions ? (
               <motion.div
                 className="w-full mt-4 py-4 flex-grow border-t-2 grid grid-cols-2 gap-10 font-semibold text-primary-blue"
@@ -127,27 +128,30 @@ export function MobileNavbar(): JSX.Element {
                 transition={{ duration: 0.5 }}
               >
                 <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                  <p className="pl-6">PATIENT REGISTRATIONS</p>
+                  <Registration />
+                  <p className="pl-2">PATIENT REGISTRATIONS</p>
                 </div>
                 <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                  <p className="pl-6">BLOOD TESTS</p>
+                  <BloodTest />
+                  <p className="pl-2">BLOOD TESTS</p>
                 </div>
                 <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                  <p className="pl-6">PATIENT TRIAGE</p>
+                  <Triage />
+                  <p className="pl-2">PATIENT TRIAGE</p>
                 </div>
               </motion.div>
             ) : null}
           </motion.li>
           <motion.li className="flex flex-wrap justify-between items-end px-4 py-2 border-b-2" variants={menuItemVariants}>
-            <div className="pt-4 rounded-lg cursor-pointer font-medium">Resources</div>
-            <Icon
-              id="resources"
-              className={`w-fit text-2xl cursor-pointer transition-all menu-item ${expanded.resources && "rotate-180"}`}
-              icon="material-symbols:keyboard-arrow-down"
+            <div
+              className="w-full flex justify-between items-end"
               onClick={() => {
                 expand("resources");
               }}
-            />
+            >
+              <div className="pt-4 rounded-lg cursor-pointer font-medium">Resources</div>
+              <Icon id="resources" className={`w-fit text-2xl cursor-pointer transition-all menu-item ${expanded.resources && "rotate-180"}`} icon="material-symbols:keyboard-arrow-down" />
+            </div>
             {expanded.resources ? (
               <motion.div
                 className="w-full mt-4 py-4 flex-grow border-t-2 grid grid-cols-2 gap-10 font-semibold text-primary-blue"
@@ -156,24 +160,26 @@ export function MobileNavbar(): JSX.Element {
                 transition={{ duration: 0.5 }}
               >
                 <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                  <p className="pl-6">CASE STUDIES</p>
+                  <CaseStudy />
+                  <p className="pl-2">CASE STUDIES</p>
                 </div>
                 <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                  <p className="pl-6">PRACTICE LOVE</p>
+                  <PracticeLove />
+                  <p className="pl-2">PRACTICE LOVE</p>
                 </div>
               </motion.div>
             ) : null}
           </motion.li>
           <motion.li className="flex flex-wrap justify-between items-end px-4 py-2 border-b-2" variants={menuItemVariants}>
-            <div className="pt-4 rounded-lg cursor-pointer font-medium">Company</div>
-            <Icon
-              id="company"
-              className={`w-fit text-2xl cursor-pointer transition-all menu-item ${expanded.company && "rotate-180"}`}
-              icon="material-symbols:keyboard-arrow-down"
+            <div
+              className="w-full flex justify-between items-end"
               onClick={() => {
                 expand("company");
               }}
-            />
+            >
+              <div className="pt-4 rounded-lg cursor-pointer font-medium">Company</div>
+              <Icon id="company" className={`w-fit text-2xl cursor-pointer transition-all menu-item ${expanded.company && "rotate-180"}`} icon="material-symbols:keyboard-arrow-down" />
+            </div>
             {expanded.company ? (
               <motion.div
                 className="w-full mt-4 py-4 flex-grow border-t-2 grid grid-cols-2 gap-10 font-semibold text-primary-blue"
@@ -182,24 +188,22 @@ export function MobileNavbar(): JSX.Element {
                 transition={{ duration: 0.5 }}
               >
                 <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                  <p className="pl-6">ABOUT US</p>
-                </div>
-                <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                  <p className="pl-6">MEET THE TEAM</p>
+                  <Team />
+                  <p className="pl-2">MEET THE TEAM</p>
                 </div>
               </motion.div>
             ) : null}
           </motion.li>
           <motion.li className="flex flex-wrap justify-between items-end px-4 py-2 border-b-2" variants={menuItemVariants}>
-            <div className="pt-4 rounded-lg cursor-pointer font-medium">Careers</div>
-            <Icon
-              id="careers"
-              className={`w-fit text-2xl cursor-pointer transition-all menu-item ${expanded.careers && "rotate-180"}`}
-              icon="material-symbols:keyboard-arrow-down"
+            <div
+              className="w-full flex justify-between items-end"
               onClick={() => {
                 expand("careers");
               }}
-            />
+            >
+              <div className="pt-4 rounded-lg cursor-pointer font-medium">Careers</div>
+              <Icon id="careers" className={`w-fit text-2xl cursor-pointer transition-all menu-item ${expanded.careers && "rotate-180"}`} icon="material-symbols:keyboard-arrow-down" />
+            </div>
             {expanded.careers ? (
               <motion.div
                 className="w-full mt-4 py-4 flex-grow border-t-2 grid grid-cols-2 gap-10 font-semibold text-primary-blue"
@@ -208,7 +212,8 @@ export function MobileNavbar(): JSX.Element {
                 transition={{ duration: 0.5 }}
               >
                 <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                  <p className="pl-6">OPEN ROLES</p>
+                  <OpenRoles />
+                  <p className="pl-2">OPEN ROLES</p>
                 </div>
               </motion.div>
             ) : null}
