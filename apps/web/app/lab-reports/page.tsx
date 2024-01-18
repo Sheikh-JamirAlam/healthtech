@@ -1,15 +1,15 @@
-import { Navbar, MobileNavbar, Footer, Notifications } from "ui";
+import { Navbar, MobileNavbar, Footer, Notifications, AutomatedReports } from "ui";
 
 export default function Page() {
   return (
     <main id="root">
       <Navbar />
       <MobileNavbar />
-      <section className="pt-52 sm:pt-48 pb-24 px-20 text-center">
-        <h1 className="text-5xl font-bold text-darker-grey hidden-css">
+      <section className="pt-52 sm:pt-48 pb-24 px-20">
+        <h1 className="text-5xl font-bold text-center text-darker-grey hidden-css">
           ⚡️ Automated <br /> lab reports & requests
         </h1>
-        <div></div>
+        <AutomatedReports />
       </section>
       <section className="pb-24 bg-light-blue">
         <div className="overflow-hidden leading-[0] fill-primary-white">

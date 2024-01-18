@@ -104,7 +104,7 @@ export default function Home() {
           </svg>
         </div>
         <div id="Contact-Form">
-          <h1 className="text-center lg:text-left lg:px-56 pt-8 text-4xl font-bold text-primary-black hidden-css">Book a demo</h1>
+          <h1 className="text-center xl:text-left lg:px-56 2xl:px-96 pt-8 text-4xl font-bold text-primary-black hidden-css">Book a demo</h1>
           <div className="calendly-inline-widget" data-url="https://calendly.com/hi-with-pete/automating-lab-reports-with-healthtech-1" style={{ minWidth: "320px", height: "700px" }}></div>
         </div>
       </section>

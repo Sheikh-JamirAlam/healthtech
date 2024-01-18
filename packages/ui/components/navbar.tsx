@@ -16,14 +16,18 @@ export function Navbar(): JSX.Element {
           </button>
           <div className="w-full pt-6 pb-10 font-semibold text-primary-blue absolute left-0 bg-primary-white z-50 shadow-xl dropdown-content">
             <div className="w-[50rem] mx-auto grid grid-cols-2 gap-10">
-              <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                <Registration />
-                <p className="pl-2">PATIENT REGISTRATIONS</p>
-              </div>
-              <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                <LabReports />
-                <p className="pl-2">LAB REPORTS</p>
-              </div>
+              <a href="/">
+                <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                  <Registration />
+                  <p className="pl-2">PATIENT REGISTRATIONS</p>
+                </div>
+              </a>
+              <a href="/lab-reports">
+                <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                  <LabReports />
+                  <p className="pl-2">LAB REPORTS</p>
+                </div>
+              </a>
               <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
                 <Triage />
                 <p className="pl-2">PATIENT TRIAGE</p>

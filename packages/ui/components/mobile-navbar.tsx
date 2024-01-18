@@ -122,23 +122,29 @@ export function MobileNavbar(): JSX.Element {
             </div>
             {expanded.solutions ? (
               <motion.div
-                className="w-full mt-4 py-4 flex-grow border-t-2 grid grid-cols-2 gap-10 font-semibold text-primary-blue"
+                className="w-full mt-4 py-4 flex-grow border-t-2 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-10 font-semibold text-primary-blue"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                  <Registration />
-                  <p className="pl-2">PATIENT REGISTRATIONS</p>
-                </div>
-                <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                  <LabReports />
-                  <p className="pl-2">LAB REPORTS</p>
-                </div>
-                <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                  <Triage />
-                  <p className="pl-2">PATIENT TRIAGE</p>
-                </div>
+                <a href="/" className="w-fit">
+                  <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                    <Registration />
+                    <p className="pl-2">PATIENT REGISTRATIONS</p>
+                  </div>
+                </a>
+                <a href="/lab-reports" className="w-fit">
+                  <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                    <LabReports />
+                    <p className="pl-2">LAB REPORTS</p>
+                  </div>
+                </a>
+                <a href="/innovation-hub" className="w-fit">
+                  <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                    <Triage />
+                    <p className="pl-2">PATIENT TRIAGE</p>
+                  </div>
+                </a>
               </motion.div>
             ) : null}
           </motion.li>
@@ -154,19 +160,23 @@ export function MobileNavbar(): JSX.Element {
             </div>
             {expanded.resources ? (
               <motion.div
-                className="w-full mt-4 py-4 flex-grow border-t-2 grid grid-cols-2 gap-10 font-semibold text-primary-blue"
+                className="w-full mt-4 py-4 flex-grow border-t-2 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-10 font-semibold text-primary-blue"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                  <CaseStudy />
-                  <p className="pl-2">CASE STUDIES</p>
-                </div>
-                <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                  <PracticeLove />
-                  <p className="pl-2">PRACTICE LOVE</p>
-                </div>
+                <a href="/case-studies" className="w-fit">
+                  <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                    <CaseStudy />
+                    <p className="pl-2">CASE STUDIES</p>
+                  </div>
+                </a>
+                <a href="/love" className="w-fit">
+                  <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                    <PracticeLove />
+                    <p className="pl-2">PRACTICE LOVE</p>
+                  </div>
+                </a>
               </motion.div>
             ) : null}
           </motion.li>
@@ -182,15 +192,17 @@ export function MobileNavbar(): JSX.Element {
             </div>
             {expanded.company ? (
               <motion.div
-                className="w-full mt-4 py-4 flex-grow border-t-2 grid grid-cols-2 gap-10 font-semibold text-primary-blue"
+                className="w-full mt-4 py-4 flex-grow border-t-2 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-10 font-semibold text-primary-blue"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                  <Team />
-                  <p className="pl-2">MEET THE TEAM</p>
-                </div>
+                <a href="/about" className="w-fit">
+                  <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                    <Team />
+                    <p className="pl-2">MEET THE TEAM</p>
+                  </div>
+                </a>
               </motion.div>
             ) : null}
           </motion.li>
@@ -206,15 +218,17 @@ export function MobileNavbar(): JSX.Element {
             </div>
             {expanded.careers ? (
               <motion.div
-                className="w-full mt-4 py-4 flex-grow border-t-2 grid grid-cols-2 gap-10 font-semibold text-primary-blue"
+                className="w-full mt-4 py-4 flex-grow border-t-2 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-10 font-semibold text-primary-blue"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                  <OpenRoles />
-                  <p className="pl-2">OPEN ROLES</p>
-                </div>
+                <a href="https://docs.healthtech1.uk/careers" className="w-fit">
+                  <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                    <OpenRoles />
+                    <p className="pl-2">OPEN ROLES</p>
+                  </div>
+                </a>
               </motion.div>
             ) : null}
           </motion.li>
