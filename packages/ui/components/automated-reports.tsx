@@ -12,7 +12,7 @@ export function AutomatedReports(): JSX.Element {
   const [selected, setSelected] = useState("reports");
 
   return (
-    <div className="px-28 pt-16 hidden-css">
+    <div className="max-w-[80rem] px-6 md:px-16 lg:px-28 pt-16 mx-auto hidden-css">
       <div className="flex">
         <div className="w-1/2 cursor-pointer" onClick={() => setSelected("reports")}>
           <div className={`h-[2px] bg-primary-blue ${selected === "reports" ? "w-full duration-300" : "w-0 duration-75"} transition-all duration-300`} />
