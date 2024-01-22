@@ -42,10 +42,12 @@ export function Navbar(): JSX.Element {
           </button>
           <div className="w-full pt-6 pb-10 font-semibold text-primary-blue absolute left-0 bg-primary-white z-50 shadow-xl dropdown-content">
             <div className="w-[50rem] mx-auto grid grid-cols-2 gap-10">
-              <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                <CaseStudy />
-                <p className="pl-2">CASE STUDIES</p>
-              </div>
+              <a href="/case-studies">
+                <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                  <CaseStudy />
+                  <p className="pl-2">CASE STUDIES</p>
+                </div>
+              </a>
               <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
                 <PracticeLove />
                 <p className="pl-2">PRACTICE LOVE</p>

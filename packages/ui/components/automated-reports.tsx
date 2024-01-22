@@ -12,13 +12,13 @@ export function AutomatedReports(): JSX.Element {
   const [selected, setSelected] = useState("reports");
 
   return (
-    <div className="max-w-[80rem] px-6 md:px-16 lg:px-28 pt-16 mx-auto hidden-css">
-      <div className="flex">
-        <div className="w-1/2 cursor-pointer" onClick={() => setSelected("reports")}>
+    <div className="max-w-[80rem] lg:px-12 pt-16 mx-auto hidden-css">
+      <div className="lg:flex">
+        <div className="w-full sm:w-3/4 lg:w-1/2 mx-auto lg:mx-0 cursor-pointer" onClick={() => setSelected("reports")}>
           <div className={`h-[2px] bg-primary-blue ${selected === "reports" ? "w-full duration-300" : "w-0 duration-75"} transition-all duration-300`} />
           <h3 className={`py-4 text-2xl font-bold text-center ${selected === "reports" ? "opacity-1" : "opacity-40"} transition-all duration-300`}>📂 Automatically file lab reports</h3>
         </div>
-        <div className="w-1/2 cursor-pointer" onClick={() => setSelected("tests")}>
+        <div className="w-full sm:w-3/4 lg:w-1/2 mx-auto lg:mx-0 cursor-pointer" onClick={() => setSelected("tests")}>
           <div className={`h-[2px] bg-primary-blue ${selected === "tests" ? "w-full duration-300" : "w-0 duration-75"} transition-all duration-300`} />
           <h3 className={`py-4 text-2xl font-bold text-center ${selected === "tests" ? "opacity-1" : "opacity-40"} transition-all duration-300`}>🩸 Generate blood tests</h3>
         </div>

@@ -7,3 +7,4 @@ export { IntroductionLoom } from "./introduction-loom";
 export { Modal } from "./modal";
 export { Notifications } from "./notifications";
 export { AutomatedReports } from "./automated-reports";
+export { InnovativePractices } from "./innovative-practices";
