@@ -48,10 +48,12 @@ export function Navbar(): JSX.Element {
                   <p className="pl-2">CASE STUDIES</p>
                 </div>
               </a>
-              <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
-                <PracticeLove />
-                <p className="pl-2">PRACTICE LOVE</p>
-              </div>
+              <a href="/love">
+                <div className="w-72 h-16 flex items-center hover:bg-secondary-grey transition-colors duration-300 rounded-lg cursor-pointer">
+                  <PracticeLove />
+                  <p className="pl-2">PRACTICE LOVE</p>
+                </div>
+              </a>
             </div>
           </div>
         </div>

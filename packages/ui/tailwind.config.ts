@@ -15,9 +15,14 @@ const config: Config = {
         "secondary-grey": "#d8e3ed",
         "light-blue": "#f3f8fc",
         "accent-blue": "#bad3e8",
+        "back-orange": "#dab894",
+        "text-orange": "#a0531c",
       },
       flex: {
         "100": "0 0 100%",
+      },
+      boxShadow: {
+        "3xl": "4px 4px 20px 5px rgba(0,0,0,.2)",
       },
       screens: {
         mobile: "992px",
