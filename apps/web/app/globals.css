@@ -25,6 +25,10 @@ body {
   opacity: 0;
   transform: translateY(5rem);
   transition: all 0.5s ease-in-out;
+
+  &.horizontal {
+    transform: translateX(-5rem);
+  }
 }
 
 @media(prefers-reduced-motion) {
@@ -36,6 +40,10 @@ body {
 .show-css {
   opacity: 1;
   transform: translateY(0);
+
+  &.horizontal {
+    transform: translateX(0);
+  }
 }
 
 .hovering:hover {

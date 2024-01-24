@@ -1,6 +1,6 @@
 export { Navbar } from "./navbar";
 export { Carousel } from "./carousel";
-export { ArrowButton, Registration, LabReports, Triage, CaseStudy, PracticeLove, Team, OpenRoles } from "./icons";
+export { ArrowButton, Registration, LabReports, Triage, CaseStudy, PracticeLove, Team, OpenRoles, Check } from "./icons";
 export { Footer } from "./footer";
 export { MobileNavbar } from "./mobile-navbar";
 export { IntroductionLoom } from "./introduction-loom";

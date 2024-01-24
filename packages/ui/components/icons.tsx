@@ -69,3 +69,11 @@ export function OpenRoles(): JSX.Element {
     </div>
   );
 }
+
+export function Check(): JSX.Element {
+  return (
+    <div className="mr-6 text-xl w-fit">
+      <Icon className="text-cyan-500 transition-all" icon="ic:baseline-check-circle" />
+    </div>
+  );
+}
