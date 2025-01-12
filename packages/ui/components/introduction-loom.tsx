@@ -27,58 +27,54 @@ export function IntroductionLoom(): JSX.Element {
     y.set(0);
   };
 
-  const handleVisibility = (): void => {
-    setIsClosed(!isClosed);
-  };
+  // const handleVisibility = (): void => {
+  //   setIsClosed(!isClosed);
+  // };
 
-  useEffect(() => {
-    const modalBody = document.getElementById("modal-body");
-    const modal = document.getElementById("modal");
-    const modalBackdrop = document.getElementById("modal-backdrop");
-    document.querySelector("body")?.classList.toggle("overflow-hidden");
-    modalBody?.classList.toggle("hidden");
-    modal?.classList.toggle("hidden");
-    modal?.classList.toggle("flex");
-    modalBackdrop?.classList.toggle("hidden");
-    modalBackdrop?.classList.toggle("flex");
-  }, [isClosed]);
+  // useEffect(() => {
+  //   const modalBody = document.getElementById("modal-body");
+  //   const modal = document.getElementById("modal");
+  //   const modalBackdrop = document.getElementById("modal-backdrop");
+  //   document.querySelector("body")?.classList.toggle("overflow-hidden");
+  //   modalBody?.classList.toggle("hidden");
+  //   modal?.classList.toggle("hidden");
+  //   modal?.classList.toggle("flex");
+  //   modalBackdrop?.classList.toggle("hidden");
+  //   modalBackdrop?.classList.toggle("flex");
+  // }, [isClosed]);
 
-  useEffect(() => {
-    const handleKeyUp = (event: KeyboardEvent): void => {
-      event.key === "Escape" && setIsClosed(!isClosed);
-    };
-    if (!isClosed) {
-      window.addEventListener("keyup", handleKeyUp);
-    }
-    return () => window.removeEventListener("keyup", handleKeyUp);
-  }, [isClosed]);
+  // useEffect(() => {
+  //   const handleKeyUp = (event: KeyboardEvent): void => {
+  //     event.key === "Escape" && setIsClosed(!isClosed);
+  //   };
+  //   if (!isClosed) {
+  //     window.addEventListener("keyup", handleKeyUp);
+  //   }
+  //   return () => window.removeEventListener("keyup", handleKeyUp);
+  // }, [isClosed]);
 
   return (
-    <>
+    <motion.div
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="w-[20rem] h-[20rem] sm:w-[34rem] sm:h-[34rem] flex justify-center items-center transition-all duration-300 hover:grayscale cursor-pointer"
+    >
+      <div className="w-full h-full">
+        <img
+          className="w-full h-full object-cover rounded-3xl"
+          src="https://uploads-ssl.webflow.com/61114f16d48cb8a800a4f117/6449689e17db15e15c7852a1_Perfocal_27-04-21_8XNI7O4T_229.jpeg_standard-p-1080.jpg"
+          alt="Intro"
+        />
+      </div>
       <motion.div
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
-        onClick={handleVisibility}
-        className="w-[20rem] h-[20rem] sm:w-[34rem] sm:h-[34rem] flex justify-center items-center transition-all duration-300 hover:grayscale cursor-pointer"
+        style={{ x: newX, y: newY }}
+        ref={ref}
+        className="w-28 h-28 bg-primary-white rounded-full absolute flex justify-center items-center overflow-hidden pointer-events-none transition-all duration-50 delay-0 ease-linear"
       >
-        <div className="w-full h-full">
-          <img
-            className="w-full h-full object-cover rounded-3xl"
-            src="https://uploads-ssl.webflow.com/61114f16d48cb8a800a4f117/6449689e17db15e15c7852a1_Perfocal_27-04-21_8XNI7O4T_229.jpeg_standard-p-1080.jpg"
-            alt="Intro"
-          />
+        <div className="w-8 h-8 flex justify-center items-center">
+          <img className="w-full h-full object-contain" src="https://uploads-ssl.webflow.com/61114f16d48cb8a800a4f117/63fe36bb1f67ba815a5e34a8_Vector-min.png" alt="Play button" />
         </div>
-        <motion.div
-          style={{ x: newX, y: newY }}
-          ref={ref}
-          className="w-28 h-28 bg-primary-white rounded-full absolute flex justify-center items-center overflow-hidden pointer-events-none transition-all duration-50 delay-0 ease-linear"
-        >
-          <div className="w-8 h-8 flex justify-center items-center">
-            <img className="w-full h-full object-contain" src="https://uploads-ssl.webflow.com/61114f16d48cb8a800a4f117/63fe36bb1f67ba815a5e34a8_Vector-min.png" alt="Play button" />
-          </div>
-        </motion.div>
       </motion.div>
-      <Modal handleVisibility={handleVisibility} isClosed={isClosed} />
-    </>
+    </motion.div>
   );
 }
